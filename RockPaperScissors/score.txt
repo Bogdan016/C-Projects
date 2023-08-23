@@ -1,0 +1,7 @@
+Name:          score:     vs computer score:     
+               
+John           1             4                 
+James          3             1                 
+Michael        0             4                 
+Daniel         0             1                 
+                
