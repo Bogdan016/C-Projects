@@ -4,6 +4,8 @@
 
 ![Example](https://github.com/Bogdan016/C-Programming-Projects/assets/76945445/b13e1a2c-2112-43d8-ada9-75aa27a19068)
 
+![Example2](https://github.com/Bogdan016/C-Programming-Projects/assets/76945445/5af91951-459b-4e1d-8010-1fe1e319255e)
+
 
 ## Features
 - Addition, subtraction, multiplication, and division of two numbers.
