@@ -1,5 +1,9 @@
 #pragma once
 
+#define EXIT_OPTION 16
+#define CALCULATION_START 1
+#define CALCULATION_END 15
+
 /**
 Function to perform addition
 **/
@@ -64,11 +68,6 @@ double Ctg(double u);
 Function to calculate the greatest common divisor (GCD) of two integers
 **/
 int gcd(int a, int b);
-
-/**
-Function to round a floating-point number to the nearest integer
-**/
-double Round(double x);
 
 /**
 Function that prints the calculator menu

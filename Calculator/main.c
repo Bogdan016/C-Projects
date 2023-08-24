@@ -6,7 +6,6 @@
 
 int main()
 {
-
     int choice;
 
     while (1)
@@ -14,13 +13,13 @@ int main()
         displayMenu();
         choice = Choice();
 
-        if (choice == 15)
+        if (choice == EXIT_OPTION)
         {
             printf("    Exiting the calculator.\n");
             break;
         }
 
-        if (choice >= 1 && choice <= 14)
+        if (choice >= CALCULATION_START && choice <= CALCULATION_END)
         {
             calculate(choice);
         }
