@@ -259,18 +259,18 @@ void octalToBinary(int n)
         n/=10;
     }
 
-    int b=0;
+    int ba=0;
     int p=1;
 
     while (x>0)
     {
         int c=x%2;
-        b+=c*p;
+        ba+=c*p;
         p*=10;
         x/=2;
     }
 
-    printf("Binary: %d\n", b);
+    printf("Binary: %d\n", ba);
 }
 
 void octalToHexa(int n)
@@ -328,11 +328,11 @@ void HexaToDecimal(int n)
         int c = n % 10;
         if (isdigit(c))
         {
-            x += c * base;
+            x += c * b;
         }
         else if (isalpha(c))
         {
-            x += (toupper(c) - 'A' + 10) * base;
+            x += (toupper(c) - 'A' + 10) * b;
         }
         b *= 16;
         n /= 10;
@@ -341,8 +341,79 @@ void HexaToDecimal(int n)
     printf("Decimal: %d\n", x);
 }
 
-void HexaToBinary(int n);
+void HexaToBinary(int n)
+{
+    int d = 0;
+    int b = 1;
 
-void HexaToOctal(int n);
+    while (n>0)
+    {
+        int c=n%10;
+        if (isdigit(c))
+        {
+            d+=c*b;
+        }
+        else if (isalpha(c))
+        {
+            c += (toupper(c) - 'A' + 10) * b;
+        }
+        b *= 16;
+        n /= 10;
+    }
 
-*/
+    int b2=0;
+    int p= 1;
+
+    while (d>0)
+    {
+        int c2 = d % 2;
+        b2+= c2 * p;
+        p*=10;
+        d/=2;
+    }
+
+    printf("Binary: %d\n", b2);
+}
+
+void HexaToOctal(int n)
+{
+    int d = 0;
+    int b = 1;
+
+    while (n>0)
+    {
+        int c=n%10;
+        if (isdigit(c))
+        {
+            d+=c*b;
+        }
+        else if (isalpha(c))
+        {
+            c += (toupper(c) - 'A' + 10) * b;
+        }
+        b *= 16;
+        n /= 10;
+    }
+
+    int o[32];
+    int k=0;
+
+    while (d>0)
+    {
+        o[k++]=d%8;
+        d/=8;
+    }
+    printf("Octal: ");
+    if (k==0)
+    {
+        printf("0");
+    }
+    else
+    {
+        for (int i=k-1; i>=0; i--)
+        {
+            printf("%d", o[i]);
+        }
+    }
+    printf("\n");
+}
