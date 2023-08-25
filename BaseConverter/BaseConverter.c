@@ -4,18 +4,17 @@
 #include <ctype.h>
 #include "BaseConverter.h"
 
-
 int isBinary(int n)
 {
     int c;
-    while (n > 0)
+    while (n>0)
     {
-        = n % 10;
-        if (c != 0 && c != 1)
+        c = n%10;
+        if (c!=0 && c!=1)
         {
             return 0;
         }
-        n /= 10;
+        n/=10;
     }
     return 1;
 }
@@ -23,14 +22,14 @@ int isBinary(int n)
 int isDecimal(int n)
 {
     int c;
-    while (n > 0)
+    while (n>0)
     {
-        c = n % 10;
-        if (c < 0 || c > 9)
+        c=n%10;
+        if (c<0 || c>9)
         {
             return 0;
         }
-        n /= 10;
+        n/=10;
     }
     return 1;
 }
@@ -47,19 +46,17 @@ int isOctal(char *s)
     return 1;
 }
 
-// Function to verify if a string is in hexadecimal format
-bool isHexadecimal(const char *str)
+int isHexadecimal(char *s)
 {
-    for (int i = 0; str[i] != '\0'; i++)
+    for (int i=0; s[i]!='\0'; i++)
     {
-        if (!isxdigit(str[i]))
+        if (!isxdigit(s[i]))
         {
-            return false;
+            return 0;
         }
     }
-    return true;
+    return 1;
 }
-
 
 void decimalToBinary(int n)
 {
@@ -152,19 +149,200 @@ void binaryToDecimal(int n)
     printf("Decimal: %d\n", x);
 }
 
-void binaryToOctal(int n);
+void binaryToOctal(int n)
+{
+    int x = 0;
+    int b = 1;
 
-void binaryToHexa(int n);
+    while (n > 0)
+    {
+        int c = n % 10;
+        x += c * b;
+        b *= 2;
+        n /= 10;
+    }
 
-void octalToDecimal(int n);
+    int o[32];
+    int k = 0;
 
-void octalToBinary(int n);
+    while (x > 0)
+    {
+        o[k++] = x % 8;
+        x /= 8;
+    }
 
-void octalToHexa(int n);
+    printf("Octal: ");
+    if (k == 0)
+    {
+        printf("0");
+    }
+    else
+    {
+        for (int i=k-1; i>=0; i--)
+        {
+            printf("%d", o[i]);
+        }
+    }
+    printf("\n");
+}
 
-void HexaToDecimal(int n);
+void binaryToHexa(int n)
+{
+    int x = 0;
+    int b = 1;
+
+    while (n > 0)
+    {
+        int c = n % 10;
+        x += c * b;
+        b *= 2;
+        n /= 10;
+    }
+
+    char hex[32];
+    int k=0;
+
+    while (x>0)
+    {
+        int r = x % 16;
+        if (r<10)
+        {
+            hex[k++] = r + '0';
+        }
+        else
+        {
+            hex[k++] = r - 10 + 'A';
+        }
+        x /= 16;
+    }
+
+    printf("Hexadecimal: ");
+    if (k == 0)
+    {
+        printf("0");
+    }
+    else
+    {
+        for (int i=k-1; i>=0; i--)
+        {
+            printf("%c", hex[i]);
+        }
+    }
+    printf("\n");
+}
+
+void octalToDecimal(int n)
+{
+    int x=0;
+    int b=1;
+
+    while (n>0)
+    {
+        int c=n%10;
+        x+=c*b;
+        b*=8;
+        n/=10;
+    }
+    printf("Decimal: %d\n", x);
+}
+
+void octalToBinary(int n)
+{
+    int x=0;
+    int b=1;
+
+    while (n>0)
+    {
+        int c=n%10;
+        x+=c*b;
+        b*=8;
+        n/=10;
+    }
+
+    int b=0;
+    int p=1;
+
+    while (x>0)
+    {
+        int c=x%2;
+        b+=c*p;
+        p*=10;
+        x/=2;
+    }
+
+    printf("Binary: %d\n", b);
+}
+
+void octalToHexa(int n)
+{
+    int x=0;
+    int b=1;
+
+    while (n>0)
+    {
+        int c=n%10;
+        x+=c*b;
+        b*=8;
+        n/=10;
+    }
+
+    char hex[32];
+    int k = 0;
+
+    while (x > 0)
+    {
+        int r = x % 16;
+        if (r < 10)
+        {
+            hex[k++] = r + '0';
+        }
+        else
+        {
+            hex[k++] = r - 10 + 'A';
+        }
+        x /= 16;
+    }
+
+    printf("Hexadecimal: ");
+    if (k == 0)
+    {
+        printf("0");
+    }
+    else
+    {
+        for (int i=k-1; i>=0; i--)
+        {
+            printf("%c", hex[i]);
+        }
+    }
+    printf("\n");
+}
+
+void HexaToDecimal(int n)
+{
+    int x = 0;
+    int b = 1;
+
+    while (n > 0)
+    {
+        int c = n % 10;
+        if (isdigit(c))
+        {
+            x += c * base;
+        }
+        else if (isalpha(c))
+        {
+            x += (toupper(c) - 'A' + 10) * base;
+        }
+        b *= 16;
+        n /= 10;
+    }
+
+    printf("Decimal: %d\n", x);
+}
 
 void HexaToBinary(int n);
 
 void HexaToOctal(int n);
 
+*/
