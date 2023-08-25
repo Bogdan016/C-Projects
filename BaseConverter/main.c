@@ -8,8 +8,9 @@ int main()
 
     printf("Conversion:\n");
     printf("1. Decimal to Binary\n");
+    printf("2. Decimal to Octal\n");
 
-    printf("Enter your choice: ");
+    printf("\nEnter your choice: ");
     scanf("%d", &choice);
 
     printf("Enter a number: ");
@@ -18,6 +19,10 @@ int main()
     if(choice == 1)
     {
         decimalToBinary(n);
+    }
+    else if(choice == 2)
+    {
+        decimalToOctal(n);
     }
     return 0;
 }
