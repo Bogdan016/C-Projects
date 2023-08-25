@@ -1,6 +1,7 @@
 # C Programming Projects
 
-This is where I've gathered a collection of coding projects that I created while studying C for my exams. Through these projects, I've explored and practiced various concepts, honing my programming skills and deepening my understanding of C.
+This is where I've gathered a collection of coding projects that I created while studying C for my exams. 
+By working on these projects, I've been able to learn and practice different ideas, which has helped me get better at programming in C and understand it more deeply.
 
 ## Projects Included
 
@@ -8,6 +9,10 @@ This is where I've gathered a collection of coding projects that I created while
 - **Hangman:** The popular word-guessing game.
 - **Tic-Tac-Toe:** Strategic fun in a timeless game.
 - **Guess the Number:** Challenge your guessing skills in this number game.
+- **Calculator**
+- **Digital Clock**
+- **Temperature Converter** 
+- **Base Converter** (Decimal, Binary, Octal, Hexazecimal)
 - **English to Morse Code:** Translate English text into Morse code.
 
 ## Development Environment
