@@ -4,26 +4,40 @@
 
 int main()
 {
-    int n, choice;
+    int n, from, to;
 
-    printf("Conversion:\n");
-    printf("1. Decimal to Binary\n");
-    printf("2. Decimal to Octal\n");
+    printf("Enter the source base (2 / 8 / 10 / 16): ");
+    scanf("%d", &from);
 
-    printf("\nEnter your choice: ");
-    scanf("%d", &choice);
+    printf("Enter the target base (2 / 8 / 10 / 16): ");
+    scanf("%d", &to);
 
-    printf("Enter a number: ");
+    if (from < 2 || from > 16 || to < 2 || to > 16)
+    {
+        printf("Enter a valid base.\n");
+        return 1;
+    }
+
+
+    printf("Enter the number in base %d: ", from);
     scanf("%d", &n);
 
-    if(choice == 1)
+    if (from == 10)
     {
-        decimalToBinary(n);
-    }
-    else if(choice == 2)
-    {
-        decimalToOctal(n);
+        switch (to)
+        {
+        case 2:
+            decimalToBinary(n);
+            break;
+        case 8:
+            decimalToOctal(n);
+            break;
+        case 16:
+            decimalToHexa(n);
+            break;
+        default:
+            printf("Invalid target base.\n");
+        }
     }
     return 0;
 }
-
