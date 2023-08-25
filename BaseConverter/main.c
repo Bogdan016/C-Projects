@@ -18,26 +18,57 @@ int main()
         return 1;
     }
 
-
     printf("Enter the number in base %d: ", from);
     scanf("%d", &n);
 
     if (from == 10)
     {
-        switch (to)
-        {
-        case 2:
+        if (to == 2)
             decimalToBinary(n);
-            break;
-        case 8:
+        else if (to == 8)
             decimalToOctal(n);
-            break;
-        case 16:
+        else if (to == 16)
             decimalToHexa(n);
-            break;
-        default:
-            printf("Invalid target base.\n");
-        }
+        else
+            printf("ERROR\n");
     }
+    else if (from == 8)
+    {
+        if (to == 10)
+            octalToDecimal(n);
+        else if (to == 2)
+            octalToBinary(n);
+        else if (to == 16)
+            octalToHexa(n);
+        else
+            printf("ERROR\n");
+    }
+    else if (from == 2)
+    {
+        if (to == 10)
+            binaryToDecimal(n);
+        else if (to == 8)
+            binaryToOctal(n);
+        else if (to == 16)
+            binaryToHexa(n);
+        else
+            printf("ERROR\n");
+    }
+    else if (from == 16)
+    {
+        if (to == 10)
+            HexaToDecimal(n);
+        else if (to == 2)
+            HexaToBinary(n);
+        else if (to == 8)
+            HexaToOctal(n);
+        else
+            printf("ERROR.\n");
+    }
+    else
+    {
+        printf("ERROR\n");
+    }
+
     return 0;
 }
