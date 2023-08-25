@@ -12,7 +12,7 @@ By working on these projects, I've been able to learn and practice different ide
 - **Calculator**
 - **Digital Clock**
 - **Temperature Converter** 
-- **Base Converter** (Decimal, Binary, Octal, Hexazecimal)
+- **Base Converter** (Decimal, Binary, Octal, Hexadecimal)
 - **English to Morse Code:** Translate English text into Morse code.
 
 ## Development Environment
