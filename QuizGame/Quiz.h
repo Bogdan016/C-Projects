@@ -1,10 +1,10 @@
 #pragma once
 
 typedef struct {
-    char *question;
-    char *options;
+    const char *question;
+    const char *options;
     char correctAnswer;
-    char *explanation;
+    const char *explanation;
 } Question;
 
-void display(Question q, int *score);
+void displayQuestion(const Question *q, int *score);
