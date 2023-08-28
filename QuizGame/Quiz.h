@@ -1,11 +1,10 @@
 #pragma once
 
-void Q1();
+typedef struct {
+    char *question;
+    char *options;
+    char correctAnswer;
+    char *explanation;
+} Question;
 
-void Q2();
-
-void Q3();
-
-void Q4();
-
-void Q5();
+void display(Question q, int *score);
