@@ -15,6 +15,6 @@ void display(Question q, int *score)
     }
     else
     {
-        printf("Incorrect!\nExplanation: %s\n", q.explanation);
+        printf("Incorrect!\n%s\n", q.explanation);
     }
 }
