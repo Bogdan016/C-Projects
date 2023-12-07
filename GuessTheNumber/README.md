@@ -1,7 +1,7 @@
 # Guess the Number Game
 Welcome to the "Guess the Number" game! Test your guessing skills and try to find the hidden number within a chosen range and difficulty level.
 
-![Example](https://github.com/Bogdan016/GuessTheNumber/assets/76945445/8ae2880d-b2b3-4f40-86f2-abb750abed7c)
+![Example](Example.png)
 
 ## Description
 Guess the Number is a simple command-line game where players guess a random number within a specified range. 
