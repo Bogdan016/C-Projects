@@ -1,7 +1,7 @@
 # Tic-Tac-Toe Game
 Tic-Tac-Toe implementation in C with player input, win/draw checks, and option to play again
 
-![Example](https://github.com/Bogdan016/TicTacToe/assets/76945445/7ea947be-b457-4711-b8f3-68a0485201c7)
+![Example](TicTacToeExample.png)
 
 
 ## Features
