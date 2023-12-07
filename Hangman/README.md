@@ -2,10 +2,10 @@
 
 Welcome to the Hangman Game implemented in C! This classic word-guessing game challenges players to uncover a hidden word letter by letter while avoiding incorrect guesses that lead to a drawing of the Hangman. The game is built with simplicity in mind, offering a captivating experience of logic and suspense.
 
-![Example 1](Hangman example.png)
+![Example 1](Hangmanexample.png)
 
 
-![Example 2](Hangman example2.png)
+![Example 2](Hangmanexample2.png)
 
 ## Features
 
