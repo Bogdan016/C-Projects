@@ -21,3 +21,4 @@ Welcome to the Hangman Game implemented in C! This classic word-guessing game ch
 ## Aknowledgements
 - Amidst my academic endeavors, I embarked on the development of this game as a productive diversion
 - In the context of this project, I employed the Code::Blocks integrated development environment (IDE) to facilitate the software development process
+
