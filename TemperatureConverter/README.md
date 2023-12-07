@@ -1,7 +1,7 @@
 # Temperature Converter
 A simple command-line program written in C that converts temperatures between Celsius, Fahrenheit, and Kelvin.
 
-![Example](https://github.com/Bogdan016/C-Programming-Projects/assets/76945445/11b81781-6017-4974-88d6-ddc4d08cfc14)
+![Example](TemperatureConverterExample.png)
 
 
 ## Description
